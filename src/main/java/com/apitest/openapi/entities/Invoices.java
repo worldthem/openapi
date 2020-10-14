@@ -9,7 +9,7 @@ import java.awt.print.Book;
 import java.time.LocalDateTime;
 
 @Entity
-//@NamedStoredProcedureQuery(name = "getAllDataFromInvoices", procedureName = "GET_ALL_DATA", resultClasses = Invoices.class)
+ //@NamedStoredProcedureQuery(name = "getInvoicesCount", procedureName = "GET_COUNT_FROM_SERVICES", resultClasses = Invoices.class)
 
 @Table(name = "invoices")
 public class Invoices {
@@ -28,6 +28,12 @@ public class Invoices {
 
     @UpdateTimestamp
     private LocalDateTime updated;
+    @Transient
+    private Integer RowCont;
+
+    public Integer getRowCont() {
+        return RowCont;
+    }
 
     public Invoices() {}
 

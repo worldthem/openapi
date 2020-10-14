@@ -21,18 +21,16 @@ public class InvoiceService {
     public List<Invoices> findAll(){
         return invoicesRepository.getAllDataFromInvoices();
     }
+
     @GetMapping("/invoices/by-id/{id}")
     public Invoices findById(@PathVariable int id){
         return invoicesRepository.getDataFromInvoicesByID(id);
     }
 
+    @GetMapping("/invoices/count")
+    public Integer count(){
+        return invoicesRepository.getCount();
+    }
 
-
-   /*
-     @RequestMapping
-     public Iterable<Invoices> findAll(){
-         return invoicesRepository.getAllDataFromInvoices();
-     }
-
-    */
+    
 }
