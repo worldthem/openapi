@@ -4,7 +4,6 @@
 **Procedure1:**
 ```
 ALTER PROCEDURE [dbo].[GET_COUNT_FROM_SERVICES] 
-  --@count_out INT  OUT
  AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
